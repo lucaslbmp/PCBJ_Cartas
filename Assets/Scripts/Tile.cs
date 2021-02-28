@@ -23,14 +23,15 @@ public class Tile : MonoBehaviour
     public void OnMouseDown()
     {
         print("Voce pressionou a telha");
-        if (tileRevelada)
-        {
-            EscondeCarta();
-        }
-        else
-        {
-            RevelaCarta();
-        }
+        //if (tileRevelada)
+        //{
+        //    EscondeCarta();
+        //}
+        //else
+        //{
+        //    RevelaCarta();
+        //}
+        GameObject.Find("gameManager").GetComponent<GameManager>().CartaSelecionada(gameObject);
     }
 
     public void EscondeCarta()
