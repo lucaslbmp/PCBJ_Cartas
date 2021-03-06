@@ -4,14 +4,13 @@ using UnityEngine;
 
 public class Tile : MonoBehaviour
 {
-    private bool tileRevelada = false;
+    private bool tileRevelada = false; // flag que sinaliza se a carta foi revelada
     public Sprite originalCarta; // sprite da carta desejada
     public Sprite backCarta; // sprite do verso da carta
 
-    // Start is called before the first frame update
     void Start()
     {
-        EscondeCarta();
+        EscondeCarta(); // Todas as cartas iniciam escondidas
     }
 
     // Update is called once per frame
@@ -20,33 +19,25 @@ public class Tile : MonoBehaviour
         
     }
 
-    public void OnMouseDown()
+    public void OnMouseDown() // Ao clicar na carta
     {
-        print("Voce pressionou a telha");
-        //if (tileRevelada)
-        //{
-        //    EscondeCarta();
-        //}
-        //else
-        //{
-        //    RevelaCarta();
-        //}
+        // Passar carta selecionada para a função que gerencia a seleçao de cartas:
         GameObject.Find("gameManager").GetComponent<GameManager>().CartaSelecionada(gameObject);
     }
 
-    public void EscondeCarta()
+    public void EscondeCarta() // Funçao que coloca a carta virada de costas
     {
-        GetComponent<SpriteRenderer>().sprite = backCarta;
+        GetComponent<SpriteRenderer>().sprite = backCarta; // 
         tileRevelada = false;
     }
 
-    public void RevelaCarta()
+    public void RevelaCarta() // Funçao que coloca a carta virada para cima
     {
         GetComponent<SpriteRenderer>().sprite = originalCarta;
         tileRevelada = true;
     }
 
-    public void setOriginalCarta(Sprite novaCarta)
+    public void setOriginalCarta(Sprite novaCarta) // Funçao que armazena um gameObject carta novo em originalCarta
     {
         originalCarta = novaCarta;
     }

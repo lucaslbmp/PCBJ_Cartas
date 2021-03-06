@@ -6,6 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Scenes/Game.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/TelaParabens.unity
+    guid: 9f411b1107102a943a7cfe3b906a7673
+  - enabled: 1
+    path: Assets/Scenes/TelaRecorde.unity
+    guid: e7f82324445cf0f4aa9549b0e4da2865
+  - enabled: 1
+    path: Assets/Scenes/End.unity
+    guid: 9c9f811e2484e8b4591d81dbc4f9ceaa
   m_configObjects: {}
